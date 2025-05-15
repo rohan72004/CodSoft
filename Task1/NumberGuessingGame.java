@@ -37,7 +37,6 @@ public class NumberGuessingGame {
             String response = scanner.next().toLowerCase();
             playAgain = response.equals("yes");
         }
-
         System.out.println("Thanks for playing! Your total score: " + score);
         scanner.close();
     }
