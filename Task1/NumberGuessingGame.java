@@ -1,3 +1,4 @@
+package Rohan;
 import java.util.Scanner;
 import java.util.Random;
 public class NumberGuessingGame {
@@ -6,9 +7,9 @@ public class NumberGuessingGame {
         Random random = new Random();
         int score = 0;
         boolean playAgain = true;
-        System.out.println("🎮 Welcome to the Number Guessing Game!");
+        System.out.println("Welcome to the Number Guessing Game!");
         while (playAgain) {
-            int numberToGuess = random.nextInt(100) + 1; // 1 to 100
+            int numberToGuess = random.nextInt(100) + 1; 
             int attempts = 0;
             int maxAttempts = 5;
             boolean hasWon = false;
@@ -19,7 +20,7 @@ public class NumberGuessingGame {
                 int guess = scanner.nextInt();
                 attempts++;
                 if (guess == numberToGuess) {
-                    System.out.println("🎉 Correct! You guessed it in " + attempts + " attempts.");
+                    System.out.println("Correct! You guessed it in " + attempts + " attempts.");
                     score++;
                     hasWon = true;
                     break;
@@ -30,7 +31,7 @@ public class NumberGuessingGame {
                 }
             }
             if (!hasWon) {
-                System.out.println("❌ You've used all attempts. The number was: " + numberToGuess);
+                System.out.println("You've used all attempts. The number was: " + numberToGuess);
             }
             System.out.println("Current Score: " + score);
             System.out.print("Do you want to play again? (yes/no): ");
